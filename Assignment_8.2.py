@@ -12,7 +12,7 @@
 #b15c469fd15ac99f42fd131c12433903 ---API KEY
 # URL - api.openweathermap.org/data/2.5/weather?zip={zip_code},us &appid=b15c469fd15ac99f42fd131c12433903
 
-import json 
+import request 
 print ("------------------Welcome to my weather application---------------------")
 
 # PROMPT USER FOR ZIP CODE
