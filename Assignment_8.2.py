@@ -15,26 +15,23 @@
 
 print ("------------------Welcome to my weather application---------------------")
 
-# PROMPT USER FOR ZIP CODE
-zip_code = input("Please enter your ZIP code:")
 
-# PROMPT USER AGAIN FOR ZIP CODE
-print("Your reponse is invalid.")
-#INSERT VALIDATION CRITERIA
-# retry_question()
-
-#requests.get('api.openweathermap.org/data/2.5/weather?zip={zip_code},us &appid=b15c469fd15ac99f42fd131c12433903')
+def weather_quarry():
+ current_weather = requests.get('api.openweathermap.org/data/2.5/weather?zip='+{zip_code}+',us &appid=b15c469fd15ac99f42fd131c12433903')
 #DISPLAY THE WEATHER FORECAST-
-current_weather = 'Null'
-print(current_weather)
-
-
+ print(current_weather.json())
 
 # ANOTHER TRY
 def retry_question():
  retry_answer = print("Would you have to try again?"+" [Y]yes [N]no")
  if retry_anser == 'Yes' or'Y':
-    pass
+    weather_quarry()
  else:
     print("Have a great day. :)")
 
+zip_code = input("Please enter your ZIP code:")
+weather_quarry(zip_code)
+#if zip_code
+# PROMPT USER AGAIN FOR ZIP CODE
+#print("Your reponse is invalid.")
+#INSERT VALIDATION CRITERIA
